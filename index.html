@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            color: black;
+        }
+        .result,.score{
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .result span,.score span{
+            font-weight: normal;
+        }
+        button{
+            width: 150px;
+            background-color: blueviolet;
+            font-weight: 600;
+            color: white;
+        }
+        p:nth-of-type(1) span {
+            font-weight: bold;
+        }
+        .loss{
+            text-align: center;
+            font-size: 3em;
+            width: 100vw;
+            background-color: brown;
+            color: white;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the number</h1>
+        <p>You have to select a random number between 1 - 10. See if you guess it?<br> You have total <span>10</span> chances.</p>
+        <h2>Conditions</h2>
+        <ul>
+            <li><b>Negative number</b> aren't allowed.</li>
+            <li>If you score more than <b>20</b> you Win.</li>
+        </ul>
+        <label for="numbr">Enter a guess: <input type="number" id="numbr"></label>
+        <button type="submit" onclick="game()">Submit Guess</button>
+        <div class="result">Result: <span>None</span></div>
+        <div class="score">Score: <span>0</span></div>
+    </div>    
+    <div class="loss">
+        <div class="wrapper">
+            <h1>K.O.</h1>
+            <p>You Loose</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
